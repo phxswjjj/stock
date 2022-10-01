@@ -5,6 +5,9 @@ import { TwStockComponent } from './tw-stock/tw-stock.component';
 const queryTwStockRoute: Route = {
   path: 'tw',
   component: TwStockComponent,
+  data: {
+    display: '台股'
+  }
 };
 
 const routes: Routes = [queryTwStockRoute];
