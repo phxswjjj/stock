@@ -98,6 +98,14 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "/stock/",
+            "name": "$name",
+            "email": "$email"
+          }
         }
       }
     }
