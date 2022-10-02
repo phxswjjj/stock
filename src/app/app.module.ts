@@ -7,6 +7,7 @@ import { MenubarModule } from 'primeng/menubar';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './share/nav/nav.component';
+import { PortfolioModule } from './portfolio/portfolio.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { NavComponent } from './share/nav/nav.component';
     AppRoutingModule,
     QueryModule,
     MenubarModule,
+    PortfolioModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
