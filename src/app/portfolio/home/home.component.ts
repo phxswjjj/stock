@@ -7,15 +7,25 @@ import { Portfolio } from '../portfolio';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  portfolios!: Portfolio[];
+  public portfolios!: Portfolio[];
 
   constructor() { }
 
   ngOnInit(): void {
     this.portfolios = [
-      new Portfolio('demo1', 'demo1'),
-      new Portfolio('demo2', 'demo2'),
+      {
+        id: 'id1',
+        name: 'demo1',
+        detailCount: 4
+      },
+      new Portfolio('id2', 'demo2'),
+      {
+        id: 'id3',
+        name: 'demo3',
+        detailCount: 161,
+      },
     ];
+    console.log(this.portfolios);
   }
 
 }

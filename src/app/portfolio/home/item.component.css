@@ -1,0 +1,55 @@
+.item {
+  display: flex;
+  -webkit-box-orient: horizontal;
+  box-orient: horizontal;
+  flex-direction: row;
+  -webkit-box-align: center;
+  box-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  height: 40px;
+  margin: 5px 8px 5px 0;
+  border-radius: 8px;
+  background-color: #fff;
+  border: 1px solid #dadce0;
+  box-shadow: none;
+}
+
+.item a {
+  display: flex;
+  padding: 8px;
+  -webkit-box-align: center;
+  box-align: center;
+  align-items: center;
+}
+
+.icon {
+  color: #5f6368;
+  font-size: 20px;
+}
+
+.name {
+  letter-spacing: .01785714em;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-size: .875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  min-width: 96px;
+  max-width: 216px;
+  margin-left: 8px;
+  color: #202124;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.detail {
+  letter-spacing: .025em;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: .75rem;
+  font-weight: 400;
+  line-height: 1rem;
+  padding-left: 8px;
+  padding-right: 4px;
+  color: #5f6368;
+}
