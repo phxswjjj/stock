@@ -14,9 +14,8 @@ export class NavComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    console.log(this.router.config);
-
     this.items = [];
+    this.router.config.sort(this.routerCompare);
     this.router.config.forEach(route => {
       const item = this.generateMenuItem(route);
       if (item)
@@ -39,6 +38,7 @@ export class NavComponent implements OnInit {
     };
     if (route.children) {
       item.items = [];
+      route.children.sort(this.routerCompare);
       route.children.forEach(childRoute => {
         const childItem = this.generateMenuItem(childRoute, fullPath);
         if (childItem)
@@ -46,6 +46,16 @@ export class NavComponent implements OnInit {
       });
     }
     return item;
+  }
+
+  routerCompare(x: Route, y: Route): number{
+    let xi = Number.MAX_SAFE_INTEGER;
+    let yi = Number.MAX_SAFE_INTEGER;
+    if (x.data && x.data['sort'] != undefined)
+      xi = x.data['sort'];
+    if (y.data && y.data['sort'] != undefined)
+      yi = y.data['sort'];
+    return xi - yi;
   }
 
 }
