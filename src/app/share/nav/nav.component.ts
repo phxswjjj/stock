@@ -35,6 +35,7 @@ export class NavComponent implements OnInit {
     const item: MenuItem = {
       label: route.data['display'],
       icon: 'pi pi-fw',
+      routerLink: route.path,
     };
     if (route.children) {
       item.items = [];
@@ -48,7 +49,7 @@ export class NavComponent implements OnInit {
     return item;
   }
 
-  routerCompare(x: Route, y: Route): number{
+  routerCompare(x: Route, y: Route): number {
     let xi = Number.MAX_SAFE_INTEGER;
     let yi = Number.MAX_SAFE_INTEGER;
     if (x.data && x.data['sort'] != undefined)
