@@ -32,14 +32,12 @@ export class NavComponent implements OnInit {
       return null;
 
     const fullPath = path.join(prefixPath, route.path!);
-    let link = fullPath;
-    if (route.data['isDir'])
-      link = '#';
     const item: MenuItem = {
       label: route.data['display'],
       icon: 'pi pi-fw',
-      routerLink: link,
     };
+    if (route.data['isDir'] !== true)
+      item.routerLink = fullPath;
     if (route.children && route.children.length > 0) {
       item.items = [];
       route.children.sort(this.routerCompare);
