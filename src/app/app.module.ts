@@ -8,8 +8,9 @@ import { MenubarModule } from 'primeng/menubar';
 import { AppComponent } from './app.component';
 import { NavComponent } from './share/nav/nav.component';
 import { PortfolioModule } from './portfolio/portfolio.module';
-import { CalculatorRoutingModule } from './calculator/calculator-routing.module';
+import { CalculatorModule } from './calculator/calculator.module';
 import { environment } from 'src/environments/environment';
+import { Page404Component } from './share/error/page404/page404.component';
 
 export const EnvironmentToken = new InjectionToken('ENVIRONMENT');
 
@@ -19,15 +20,16 @@ declare let gtag: Function;
   declarations: [
     AppComponent,
     NavComponent,
+    Page404Component,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule,
     QueryModule,
     MenubarModule,
     PortfolioModule,
-    CalculatorRoutingModule,
+    CalculatorModule,
+    AppRoutingModule,
   ],
   providers: [{ provide: EnvironmentToken, useValue: environment }],
   bootstrap: [AppComponent]
