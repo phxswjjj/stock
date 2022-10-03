@@ -26,18 +26,21 @@ export class NavComponent implements OnInit {
   generateMenuItem(route: Route, prefixPath: string = ''): MenuItem | null {
     //https://stackoverflow.com/questions/67572355/webpack-5-angular-polyfill-for-node-js-crypto-js/67808287#67808287
     var path = require('path');
-    const fullPath = path.join(prefixPath, route.path!);
-    if (!fullPath)
+    if (!route.path)
       return null;
     else if (!route.data || !route.data['display'])
       return null;
 
+    const fullPath = path.join(prefixPath, route.path!);
+    let link = fullPath;
+    if (route.data['isDir'])
+      link = '#';
     const item: MenuItem = {
       label: route.data['display'],
       icon: 'pi pi-fw',
-      routerLink: route.path,
+      routerLink: link,
     };
-    if (route.children) {
+    if (route.children && route.children.length > 0) {
       item.items = [];
       route.children.sort(this.routerCompare);
       route.children.forEach(childRoute => {
