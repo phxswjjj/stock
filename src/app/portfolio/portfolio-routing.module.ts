@@ -5,7 +5,7 @@ import { Route, RouterModule, Routes } from '@angular/router';
 const homeRoute: Route = {
   path: 'portfolio', component: HomeComponent,
   data: {
-    display: '首頁',
+    display: '投資組合',
     sort: 0,
   }
 }
