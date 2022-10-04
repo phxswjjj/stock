@@ -1,0 +1,23 @@
+<ul class="list" *ngFor="let item of items">
+  <li class="item">
+    <a [href]="'quote/' + item.code">
+      <div>
+        <div class="title">
+          <div class="code-wrapper">
+            <div class="code">1234</div>
+          </div>
+          <div class="name">SS</div>
+        </div>
+        <div class="price">
+          $4.00
+        </div>
+        <div class="price-diff">
+          +$0.6
+        </div>
+        <div class="percent-diff">
+          +$6.0%
+        </div>
+      </div>
+    </a>
+  </li>
+</ul>
