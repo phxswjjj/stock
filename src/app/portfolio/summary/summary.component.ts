@@ -14,12 +14,14 @@ export class SummaryComponent implements OnInit {
 
   ngOnInit(): void {
     this.items.push({
-      code: '0050',
-      name: '元大台灣50',
+      code: '2330',
+      name: '台積電',
+      price: 445,
     });
     this.items.push({
-      code: '0056',
-      name: '元大高股息',
+      code: '2454',
+      name: '聯發科',
+      price: 599,
     });
   }
 

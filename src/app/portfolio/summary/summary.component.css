@@ -14,6 +14,18 @@
   display: flex;
 }
 
+.item-content {
+  -webkit-box-align: center;
+  box-align: center;
+  align-items: center;
+  border-top: 1px solid #e8eaed;
+  height: 48px;
+}
+
+.item-content:hover {
+  background: #28292a;
+}
+
 .title {
   flex: 1;
 }
@@ -59,5 +71,41 @@
   font-size: .875rem;
   font-weight: 500;
   line-height: 1.25rem;
+  color: white;
+}
+
+.price {
+  width: 116px;
+  display: flex;
+  box-pack: end;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: white;
+}
+
+.price-diff {
+  width: 116px;
+  display: flex;
+  box-pack: end;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  box-align: center;
+  align-items: center;
+  color: white;
+}
+
+.percent-diff {
+  width: 116px;
+  display: flex;
+  box-pack: end;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  box-align: center;
+  align-items: center;
   color: white;
 }

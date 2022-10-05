@@ -1,3 +1,13 @@
 .list-portfolio {
   display: flex;
 }
+
+.content2 {
+  max-width: 1024px;
+  padding: 24px 48px;
+  margin: auto;
+}
+
+.list-summary {
+  width: 63%;
+}
