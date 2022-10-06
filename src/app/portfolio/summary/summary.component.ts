@@ -13,16 +13,8 @@ export class SummaryComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.items.push({
-      code: '2330',
-      name: '台積電',
-      price: 445,
-    });
-    this.items.push({
-      code: '2454',
-      name: '聯發科',
-      price: 599,
-    });
+    this.items.push(new Item('2330', '台積電', 445));
+    this.items.push(new Item('2454', '聯發科', 599, 612));
   }
 
 }
