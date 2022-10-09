@@ -10,11 +10,8 @@
   height: 48px;
 }
 
-.item div {
-  display: flex;
-}
-
 .item-content {
+  display: flex;
   -webkit-box-align: center;
   box-align: center;
   align-items: center;
@@ -28,6 +25,8 @@
 
 .title {
   flex: 1;
+  overflow: hidden;
+  display: flex;
 }
 
 .code-wrapper {
@@ -51,9 +50,10 @@
   font-weight: bold;
   height: 22px;
   color: white;
+  display: flex;
 }
 
-.name {
+.name-wrapper {
   flex: 1;
   max-height: 100%;
   letter-spacing: .01785714em;
@@ -62,15 +62,12 @@
   font-weight: 500;
   line-height: 1.25rem;
   width: calc(100% - 56px);
-  width: 300px;
+}
+
+.name {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  letter-spacing: .01785714em;
-  font-family: "Google Sans", Roboto, Arial, sans-serif;
-  font-size: .875rem;
-  font-weight: 500;
-  line-height: 1.25rem;
   color: white;
 }
 
@@ -108,4 +105,27 @@
   box-align: center;
   align-items: center;
   color: white;
+}
+
+.num-up,
+.num-down {
+  letter-spacing: .00625em;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  padding: 0 8px;
+  border-radius: 8px;
+  width: min-content;
+  min-width: 40px;
+}
+
+.num-up {
+  color: #a50e0e;
+  background: #fce8e6;
+}
+
+.num-down {
+  color: #137333;
+  background: #e6f4ea;
 }

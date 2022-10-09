@@ -6,16 +6,28 @@
           <div class="code-wrapper">
             <div class="code">{{ item.code }}</div>
           </div>
-          <div class="name">{{ item.name }}</div>
+          <div class="name-wrapper">
+            <div class="name">{{ item.name }}</div>
+          </div>
         </div>
         <div class="price">
           ${{ item.price }}
         </div>
         <div class="price-diff">
-          {{ item.priceDiffFormatted }}
+          <span [ngClass]="{
+            'num-up': item.priceDiff && item.priceDiff! > 0,
+            'num-down': item.priceDiff && item.priceDiff! < 0
+          }">
+            {{ item.priceDiffFormatted }}
+          </span>
         </div>
         <div class="percent-diff">
-          {{ item.percentDiffFormatted }}
+          <span [ngClass]="{
+            'num-up': item.percentDiff && item.percentDiff! > 0,
+            'num-down': item.percentDiff && item.percentDiff! < 0
+          }">
+            {{ item.percentDiffFormatted }}
+          </span>
         </div>
       </div>
     </a>

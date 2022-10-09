@@ -15,6 +15,7 @@ export class SummaryComponent implements OnInit {
   ngOnInit(): void {
     this.items.push(new Item('2330', '台積電', 445));
     this.items.push(new Item('2454', '聯發科', 599, 612));
+    this.items.push(new Item('0050', '元大寶來台灣卓越50證券投資信託基金', 106.20, 102));
   }
 
 }
