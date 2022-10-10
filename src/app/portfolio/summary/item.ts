@@ -7,7 +7,14 @@ const percentFormatter = new Intl.NumberFormat(locale, {
   style: 'percent', minimumFractionDigits: 2
 });
 
-export class Item {
+export enum ItemType {
+  OTC = 'OTC',
+  TWSE = 'TWSE',
+  ETF = 'ETF',
+}
+
+export abstract class Item {
+  abstract Type: ItemType;
 
   get priceDiff(): number | null {
     if (this.cost == null || this.price == null) return null;
@@ -28,4 +35,19 @@ export class Item {
 
   constructor(public code: string, public name: string,
     public price = 0, public cost: number | null = null) { }
+}
+
+export class TWSEItem extends Item {
+  Type: ItemType = ItemType.TWSE;
+
+}
+
+export class OTCItem extends Item {
+  Type: ItemType = ItemType.OTC;
+
+}
+
+export class ETFItem extends Item {
+  Type: ItemType = ItemType.ETF;
+
 }

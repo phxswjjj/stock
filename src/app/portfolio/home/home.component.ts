@@ -25,7 +25,6 @@ export class HomeComponent implements OnInit {
         detailCount: 161,
       },
     ];
-    console.log(this.portfolios);
   }
 
 }

@@ -4,7 +4,14 @@
       <div class="item-content">
         <div class="title">
           <div class="code-wrapper">
-            <div class="code">{{ item.code }}</div>
+            <div [ngClass]="{
+              'code': true,
+              'etf': item.Type == ItemType.ETF,
+              'twse': item.Type == ItemType.TWSE,
+              'otc': item.Type == ItemType.OTC
+            }">
+              {{ item.code }}
+            </div>
           </div>
           <div class="name-wrapper">
             <div class="name">{{ item.name }}</div>

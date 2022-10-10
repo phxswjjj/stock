@@ -35,7 +35,6 @@
 }
 
 .code {
-  background-color: #e1363d;
   align-self: right;
   border-radius: 4px;
   width: 47px;
@@ -51,6 +50,18 @@
   height: 22px;
   color: white;
   display: flex;
+}
+
+.code.otc {
+  background-color: #333333;
+}
+
+.code.twse {
+  background-color: #e1363d;
+}
+
+.code.etf {
+  background-color: #3333ff;
 }
 
 .name-wrapper {
